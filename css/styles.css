@@ -234,3 +234,37 @@ form button:hover {
             transform: translateY(-900px) rotate(600deg);
   }
 }
+
+/* 在styles.css中添加/修改 */
+/* 1. 所有元素用比例适配，而非固定宽高 */
+.cake, .animation-box, .bg-bubbles {
+  width: 100%; /* 宽度占满屏幕 */
+  height: auto; /* 高度自动按比例缩放 */
+  max-width: 600px; /* 限制最大宽度，避免电脑端太宽 */
+  margin: 0 auto; /* 居中显示 */
+}
+
+/* 2. 针对手机竖屏，调整关键元素的显示比例 */
+@media (orientation: portrait) { /* 竖屏（手机默认） */
+  .birthday-title {
+    font-size: 6vw; /* 按屏幕宽度比例缩放字体 */
+  }
+  .btn-submit {
+    width: 80%; /* 按钮占屏幕80%宽度 */
+    padding: 3vw 0; /* 内边距也按比例 */
+  }
+  /* 蛋糕动画容器，适配手机竖屏高度 */
+  .cake-container {
+    height: 70vh; /* 占屏幕高度70% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* 3. 电脑端（横屏）保持原有比例 */
+@media (orientation: landscape) and (min-width: 768px) {
+  .cake-container {
+    height: 80vh;
+  }
+}
