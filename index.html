@@ -3,6 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- 基础视口配置（必加） -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<!-- 隐藏浏览器默认样式，强制全屏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<!-- 针对安卓浏览器 -->
+<meta name="mobile-web-app-capable" content="yes">
+<!-- CSS强制页面占满屏幕 -->
+<style>
+  /* 重置默认边距，让页面占满屏幕 */
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;  /* 视口宽度100% */
+    height: 100vh; /* 视口高度100% */
+    overflow: hidden; /* 隐藏滚动条，避免出现多余区域 */
+  }
+  /* 核心容器也占满全屏 */
+  .wrapper, .container {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box; /* 避免内边距撑大容器 */
+  }
+</style>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday</title>
